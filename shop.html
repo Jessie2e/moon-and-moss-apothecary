@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shop Moon and Moss Apothecary small-batch bath, body, lip, grooming, pet, and outdoor products." />
+  <meta name="theme-color" content="#78856b" />
+  <title>Shop | Moon and Moss Apothecary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="shop-page">
+  <div class="announcement">
+    <div class="announcement__inner">
+      <span>♡ Handmade</span><i>✦</i><span>Small Batch</span><i>✦</i><span>Natural Ingredients</span><i>✦</i><span>Kind to Sensitive Skin</span>
+      <a href="index.html#contact">Questions? <span aria-hidden="true">◎ ◉</span></a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Moon and Moss Apothecary home">
+      <img src="assets/FBlogo.jpg" alt="Moon and Moss Apothecary logo" />
+    </a>
+
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a class="active" href="shop.html">Shop</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#markets">Booth Dates</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <button class="pill pill--pink header-cta shop-bag-button" type="button" data-open-bag>
+      <span class="bag-line" aria-hidden="true">▢</span>
+      Order Bag <span class="shop-bag-count" data-bag-count>0</span>
+    </button>
+  </header>
+
+  <button class="shop-floating-bag" type="button" data-open-bag aria-label="Open order bag">
+    <span aria-hidden="true">♧</span>
+    <span>Order Bag</span>
+    <b class="shop-bag-count" data-bag-count aria-live="polite">0</b>
+  </button>
+
+  <main>
+    <section class="shop-hero">
+      <div class="shop-hero__copy reveal">
+        <p class="eyebrow">SMALL-BATCH FAVORITES</p>
+        <h1>Find a little ritual<br><em>that feels like you.</em></h1>
+        <p>Browse what Moon + Moss has been making lately — from bath salts and scrubs to lip care, grooming goods, pet care, and a few sweet extras.</p>
+        <div class="shop-hero__notes">
+          <span>♡ Handmade in small batches</span>
+          <span>✦ Availability changes often</span>
+          <span>☾ Shipping + market pickup</span>
+        </div>
+      </div>
+
+      <div class="shop-hero__collage reveal reveal--delay" aria-label="Moon and Moss product assortment">
+        <figure class="shop-hero__photo shop-hero__photo--one">
+          <img src="assets/products/lavender-bath-salts.webp" alt="Lavender bath salts" />
+        </figure>
+        <figure class="shop-hero__photo shop-hero__photo--two">
+          <img src="assets/products/caramel-orange-clove-body-scrub.webp" alt="Caramel, orange and clove body scrub" />
+        </figure>
+        <figure class="shop-hero__photo shop-hero__photo--three">
+          <img src="assets/products/sugar-spun-pineapple-lip-balm.webp" alt="Sugar spun pineapple lip balm" />
+        </figure>
+        <span class="shop-hero__scribble">made with care ♡</span>
+      </div>
+    </section>
+
+    <section class="shop-catalog" aria-labelledby="shop-title">
+      <div class="shop-catalog__head reveal">
+        <div>
+          <p class="eyebrow">SHOP THE COLLECTION</p>
+          <h2 id="shop-title">Small things for softer days.</h2>
+          <p class="shop-catalog__intro">Prices and exact availability can change with each small batch. Add anything you love to your order bag and send Moon + Moss a quick request.</p>
+        </div>
+        <div class="shop-search-wrap">
+          <label for="product-search">Search products</label>
+          <div class="shop-search">
+            <span aria-hidden="true">⌕</span>
+            <input id="product-search" type="search" placeholder="Try lip balm, lavender, beard oil…" autocomplete="off" />
+          </div>
+        </div>
+      </div>
+
+      <div class="shop-filter-row reveal" aria-label="Filter products by category">
+        <button class="shop-filter is-active" type="button" data-filter="all">All</button>
+        <button class="shop-filter" type="button" data-filter="bath-body">Bath + Body</button>
+        <button class="shop-filter" type="button" data-filter="lip-care">Lip Care</button>
+        <button class="shop-filter" type="button" data-filter="grooming">Beard + Shave</button>
+        <button class="shop-filter" type="button" data-filter="pet-outdoor">Pet + Outdoor</button>
+        <button class="shop-filter" type="button" data-filter="gifts">Gifts + Extras</button>
+      </div>
+
+      <div class="shop-results-meta">
+        <span data-results-count>14 products</span>
+        <span>Small-batch catalog · availability confirmed before payment</span>
+      </div>
+
+      <div class="shop-product-grid" id="product-grid" aria-live="polite"></div>
+
+      <div class="shop-empty" data-empty hidden>
+        <span>☾</span>
+        <h3>No products match that search yet.</h3>
+        <p>Try another word or clear the filters to browse everything.</p>
+        <button class="pill pill--soft" type="button" data-reset-filters>Show all products</button>
+      </div>
+    </section>
+
+    <section class="shop-market-callout">
+      <div class="shop-market-callout__image reveal">
+        <img src="assets/markettable.jpg" alt="Moon and Moss Apothecary market booth" />
+      </div>
+      <div class="shop-market-callout__copy reveal">
+        <p class="eyebrow">LOVE SHOPPING IN PERSON?</p>
+        <h2>The booth always has a few surprises.</h2>
+        <p>Market days are where you’ll find more scents, seasonal batches, and whatever is fresh off the making table.</p>
+        <a class="pill pill--green" href="index.html#markets">View Booth Dates →</a>
+      </div>
+    </section>
+  </main>
+
+  <aside class="order-bag" data-order-bag aria-hidden="true" aria-label="Order bag">
+    <button class="order-bag__scrim" type="button" data-close-bag aria-label="Close order bag"></button>
+    <div class="order-bag__panel">
+      <div class="order-bag__header">
+        <div>
+          <p class="eyebrow">YOUR ORDER BAG</p>
+          <h2>Send a little wishlist ♡</h2>
+        </div>
+        <button class="order-bag__close" type="button" data-close-bag aria-label="Close order bag">×</button>
+      </div>
+
+      <p class="order-bag__note">This isn’t a checkout yet. Build your list, then send it to Moon + Moss to confirm availability, pricing, pickup or shipping.</p>
+      <div class="order-bag__items" data-bag-items></div>
+
+      <div class="order-bag__empty" data-bag-empty>
+        <span>♧</span>
+        <p>Your bag is empty.<br>Add a few favorites to get started.</p>
+      </div>
+
+      <div class="order-bag__actions" data-bag-actions hidden>
+        <button class="pill pill--pink" type="button" data-email-order>Email Order Request</button>
+        <button class="order-bag__clear" type="button" data-clear-bag>Clear bag</button>
+        <small>Moon + Moss will confirm availability, pricing, and shipping or pickup details before payment.</small>
+      </div>
+    </div>
+  </aside>
+
+  <footer>
+    <div class="footer-wave"></div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Moon and Moss Apothecary</h3>
+        <p class="handwritten">Where earth meets energy</p>
+      </div>
+      <nav>
+        <a href="index.html">Home</a><a href="shop.html">Shop</a><a href="index.html#about">About</a><a href="index.html#markets">Booth Dates</a><a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="socials"><span>◎</span><span>◉</span><span>♪</span></div>
+      <p class="footer-note">Handmade with love<br>for a kinder, brighter tomorrow. ♡</p>
+    </div>
+    <div class="footer-thanks">❧ &nbsp; Thank you for supporting my small business! &nbsp; ♡</div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="shop.js"></script>
+</body>
+</html>
