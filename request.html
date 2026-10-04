@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ask Moon and Moss Apothecary about product availability, pricing, pickup, and shipping." />
+  <meta name="theme-color" content="#78856b" />
+  <title>Request an Item | Moon and Moss Apothecary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="request-page">
+  <div class="announcement"><div class="announcement__inner"><span>♡ No payment needed yet</span><i>✦</i><span>Ask about availability</span><i>✦</i><span>Shipping or pickup</span><a href="shop.html">Keep browsing →</a></div></div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Moon and Moss Apothecary home"><img src="assets/FBlogo.jpg" alt="Moon and Moss Apothecary logo" /></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="index.html#about">About</a><a href="market.html">At the Market</a><a href="index.html#contact">Contact</a></nav>
+    <a class="pill pill--soft header-cta" href="shop.html">← Back to Shop</a>
+  </header>
+
+  <main class="request-shell">
+    <section class="request-intro reveal">
+      <p class="eyebrow">START A CONVERSATION</p>
+      <h1>Tell me what<br><em>caught your eye.</em></h1>
+      <p>This isn’t a checkout. Send a quick request and Moon + Moss will follow up to confirm availability, pricing, shipping or pickup, and payment details.</p>
+    </section>
+
+    <section class="request-card reveal reveal--delay">
+      <div class="request-bag-summary" data-request-bag hidden>
+        <p class="eyebrow">FROM YOUR ORDER BAG</p>
+        <div data-request-bag-items></div>
+        <button type="button" class="request-clear" data-request-clear>Clear these items</button>
+      </div>
+
+      <form class="request-form" data-request-form>
+        <div class="request-form__row">
+          <label><span>Your name *</span><input type="text" name="name" required autocomplete="name" placeholder="Your name"></label>
+          <label><span>Email *</span><input type="email" name="email" required autocomplete="email" placeholder="you@example.com"></label>
+        </div>
+
+        <div class="request-form__row">
+          <label><span>Phone number</span><input type="tel" name="phone" autocomplete="tel" placeholder="Optional"></label>
+          <label><span>Best way to contact you *</span><select name="contact" required><option value="">Choose one</option><option>Email</option><option>Text message</option><option>Phone call</option></select></label>
+        </div>
+
+        <label><span>Shipping address</span><textarea name="address" rows="3" autocomplete="street-address" placeholder="If you’re hoping to have it shipped, add your address here."></textarea></label>
+
+        <label><span>What are you interested in? *</span><textarea name="items" rows="5" required placeholder="Describe the product, scent, color, gift set, jewelry, or anything else you saw that you liked."></textarea></label>
+
+        <label><span>Anything else?</span><textarea name="notes" rows="3" placeholder="Questions, quantity, pickup preference, special request, etc."></textarea></label>
+
+        <div class="request-form__footer">
+          <p><strong>No payment is collected here.</strong> Moon + Moss will reply with availability, pricing, and next steps.</p>
+          <button class="pill pill--pink" type="submit">Create My Email Request →</button>
+        </div>
+        <p class="request-form__status" data-request-status aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-wave"></div>
+    <div class="footer-grid">
+      <div class="footer-brand"><h3>Moon and Moss Apothecary</h3><p class="handwritten">Where earth meets energy</p></div>
+      <nav><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="index.html#about">About</a><a href="market.html">At the Market</a><a href="index.html#contact">Contact</a></nav>
+      <div class="socials"><span>◎</span><span>◉</span><span>♪</span></div>
+      <p class="footer-note">Handmade with love<br>for a kinder, brighter tomorrow. ♡</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script src="request.js"></script>
+</body>
+</html>

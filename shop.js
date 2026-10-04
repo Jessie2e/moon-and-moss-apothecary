@@ -1,5 +1,3 @@
-const ORDER_EMAIL = 'hello@moonandmossapothecary.com'; // Replace with the client's real order email before launch.
-
 const products = [
   {
     id: 'lavender-bath-salts',
@@ -318,23 +316,7 @@ document.querySelector('[data-clear-bag]')?.addEventListener('click', () => {
 });
 
 document.querySelector('[data-email-order]')?.addEventListener('click', () => {
-  const lines = Object.entries(orderBag).map(([id, qty]) => {
-    const product = products.find((item) => item.id === id);
-    return product ? `- ${product.name} x${qty}` : '';
-  }).filter(Boolean);
-
-  const subject = 'Moon + Moss order request';
-  const body = [
-    'Hi! I would love to check availability for these Moon + Moss items:',
-    '',
-    ...lines,
-    '',
-    'Preferred fulfillment: shipping / market pickup (please circle or edit)',
-    '',
-    'Could you let me know availability, pricing, and next steps? Thank you!'
-  ].join('\n');
-
-  window.location.href = `mailto:${ORDER_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = 'request.html';
 });
 
 document.addEventListener('keydown', (event) => {
