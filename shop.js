@@ -2,6 +2,7 @@ const products = [
   {
     id: 'lavender-bath-salts',
     name: 'Lavender Bath Salts',
+    price: '',
     category: 'bath-body',
     categoryLabel: 'Bath + Body',
     image: 'assets/products/lavender-bath-salts.webp',
@@ -12,6 +13,7 @@ const products = [
   {
     id: 'mahogany-teakwood-beard-oil',
     name: 'Mahogany Teakwood Beard Oil',
+    price: '',
     category: 'grooming',
     categoryLabel: 'Beard + Shave',
     image: 'assets/products/mahogany-teakwood-beard-oil.webp',
@@ -22,6 +24,7 @@ const products = [
   {
     id: 'mahogany-teakwood-aftershave',
     name: 'Mahogany Teakwood Aftershave',
+    price: '',
     category: 'grooming',
     categoryLabel: 'Beard + Shave',
     image: 'assets/products/mahogany-teakwood-aftershave.webp',
@@ -32,6 +35,7 @@ const products = [
   {
     id: 'caramel-orange-clove-body-scrub',
     name: 'Caramel, Orange + Clove Body Scrub',
+    price: '$5',
     category: 'bath-body',
     categoryLabel: 'Bath + Body',
     image: 'assets/products/caramel-orange-clove-body-scrub.webp',
@@ -42,6 +46,7 @@ const products = [
   {
     id: 'decorative-soap-bars',
     name: 'Decorative Soap Bars',
+    price: '$3',
     category: 'bath-body',
     categoryLabel: 'Bath + Body',
     image: 'assets/products/decorative-soap-bars.webp',
@@ -52,16 +57,18 @@ const products = [
   {
     id: 'gemstone-hoop-earrings',
     name: 'Gemstone Hoop Earrings',
-    category: 'gifts',
-    categoryLabel: 'Gifts + Extras',
+    price: '$5',
+    category: 'jewelry',
+    categoryLabel: 'Jewelry',
     image: 'assets/products/gemstone-hoop-earrings.webp',
     description: 'Colorful gemstone hoops for a little market-table sparkle beyond bath + body.',
-    tag: 'Giftable',
+    tag: 'Jewelry',
     position: '50% 45%',
   },
   {
     id: 'green-tea-lemon-lip-balm',
     name: 'Green Tea + Lemon Lip Balm',
+    price: '$3',
     category: 'lip-care',
     categoryLabel: 'Lip Care',
     image: 'assets/products/green-tea-lemon-lip-balm.webp',
@@ -72,6 +79,7 @@ const products = [
   {
     id: 'blackberry-acai-lip-balm',
     name: 'Blackberry Açaí Lip Balm',
+    price: '$3',
     category: 'lip-care',
     categoryLabel: 'Lip Care',
     image: 'assets/products/blackberry-acai-lip-balm.webp',
@@ -82,6 +90,7 @@ const products = [
   {
     id: 'sugar-spun-pineapple-lip-balm',
     name: 'Sugar Spun Pineapple Lip Balm',
+    price: '$3',
     category: 'lip-care',
     categoryLabel: 'Lip Care',
     image: 'assets/products/sugar-spun-pineapple-lip-balm.webp',
@@ -92,6 +101,7 @@ const products = [
   {
     id: 'peppermint-eucalyptus-foot-cream',
     name: 'Peppermint Eucalyptus Foot Cream',
+    price: '',
     category: 'bath-body',
     categoryLabel: 'Bath + Body',
     image: 'assets/products/peppermint-eucalyptus-foot-cream.webp',
@@ -102,6 +112,7 @@ const products = [
   {
     id: 'anxiety-relief-spray-for-dogs',
     name: 'Anxiety Relief Spray for Dogs',
+    price: '',
     category: 'pet-outdoor',
     categoryLabel: 'Pet + Outdoor',
     image: 'assets/products/anxiety-relief-spray-for-dogs.webp',
@@ -112,6 +123,7 @@ const products = [
   {
     id: 'peppermint-foot-scrub',
     name: 'Peppermint Foot Scrub',
+    price: '$5',
     category: 'bath-body',
     categoryLabel: 'Bath + Body',
     image: 'assets/products/peppermint-foot-scrub.webp',
@@ -122,6 +134,7 @@ const products = [
   {
     id: 'after-sun-relief-spray',
     name: 'After Sun Relief Spray',
+    price: '',
     category: 'pet-outdoor',
     categoryLabel: 'Pet + Outdoor',
     image: 'assets/products/after-sun-relief-spray.webp',
@@ -132,12 +145,104 @@ const products = [
   {
     id: 'bug-repellent-spray',
     name: 'Bug Repellent Spray',
+    price: '',
     category: 'pet-outdoor',
     categoryLabel: 'Pet + Outdoor',
     image: 'assets/products/bug-repellent-spray.webp',
     description: 'A small spray bottle made for outdoor days, markets, porches, and patios.',
     tag: 'Outdoor Care',
     position: '50% 35%',
+  },
+
+  // NEW PRODUCTS
+
+  {
+    id: 'heart-pendant-necklace',
+    name: 'Heart Pendant Necklace',
+    price: '$7',
+    category: 'jewelry',
+    categoryLabel: 'Jewelry',
+    image: 'assets/products/heart-pendant-necklace.jpg',
+    description: 'A warm-toned heart pendant on a simple cord necklace for gifting or everyday wear.',
+    tag: 'Jewelry',
+    position: '50% 55%',
+  },
+  {
+    id: 'spiral-gemstone-pendant-necklace',
+    name: 'Spiral Gemstone Pendant Necklace',
+    price: '$7',
+    category: 'jewelry',
+    categoryLabel: 'Jewelry',
+    image: 'assets/products/spiral-gemstone-pendant-necklace.jpg',
+    description: 'A gemstone pendant with copper-toned spiral detail on a simple black cord.',
+    tag: 'Jewelry',
+    position: '50% 62%',
+  },
+  {
+    id: 'crescent-moon-necklace',
+    name: 'Crescent Moon Necklace',
+    price: '$7',
+    category: 'jewelry',
+    categoryLabel: 'Jewelry',
+    image: 'assets/products/crescent-moon-necklace2.jpg',
+    description: 'A crescent moon pendant with an antique-inspired finish on a dark chain.',
+    tag: 'Jewelry',
+    position: '50% 62%',
+  },
+  {
+    id: 'halloween-witch-hat-necklace',
+    name: 'Halloween Witch Hat Necklace',
+    price: '$7',
+    category: 'jewelry',
+    categoryLabel: 'Jewelry',
+    image: 'assets/products/halloween-witch-hat-necklace.jpg',
+    description: 'A playful witch hat charm necklace made for spooky season and Halloween gifting.',
+    tag: 'Seasonal',
+    position: '50% 70%',
+  },
+  {
+    id: 'halloween-pumpkin-necklace',
+    name: 'Halloween Pumpkin Necklace',
+    price: '$7',
+    category: 'jewelry',
+    categoryLabel: 'Jewelry',
+    image: 'assets/products/halloween-pumpkin-necklace.jpg',
+    description: 'A cheerful jack-o’-lantern charm necklace for a little seasonal fun.',
+    tag: 'Seasonal',
+    position: '50% 70%',
+  },
+  {
+    id: 'pentacle-necklace',
+    name: 'Pentacle Necklace',
+    price: '$7',
+    category: 'jewelry',
+    categoryLabel: 'Jewelry',
+    image: 'assets/products/pentacle-necklace.jpg',
+    description: 'A silver-toned pentacle pendant paired with a simple black cord necklace.',
+    tag: 'Jewelry',
+    position: '50% 68%',
+  },
+  {
+    id: 'pain-relief-massage-oil',
+    name: 'Pain Relief Massage Oil',
+    price: '$10',
+    category: 'bath-body',
+    categoryLabel: 'Bath + Body',
+    image: 'assets/products/pain-relief-massage-oil.jpg',
+    description: 'A botanical massage oil blend with peppermint, eucalyptus, lavender, and tea tree oils.',
+    tag: 'Massage',
+    position: '50% 48%',
+  },
+  {
+    id: 'coffee-wax-melts',
+    name: 'Coffee Wax Melts',
+    price: '$4',
+    category: 'gifts',
+    categoryLabel: 'Gifts + Extras',
+    image: 'assets/products/coffee-wax-melts.jpg',
+    description: 'Coffee-inspired wax melts for adding a cozy little fragrance moment at home.',
+    tag: 'Home Fragrance',
+    position: '50% 52%',
   },
 ];
 
@@ -180,6 +285,7 @@ const productCard = (product) => `
     <div class="shop-product-card__copy">
       <p>${product.categoryLabel}</p>
       <h3>${product.name}</h3>
+      ${product.price ? `<strong class="shop-product-card__price">${product.price}</strong>` : ''}
       <span>${product.description}</span>
       <button class="shop-product-card__button" type="button" data-add-product="${product.id}">
         Add to order bag <span aria-hidden="true">→</span>
@@ -251,7 +357,8 @@ function renderBag() {
         <div>
           <span>${product.categoryLabel}</span>
           <strong>${product.name}</strong>
-          <div class="order-bag-item__qty" aria-label="Quantity for ${product.name}">
+${product.price ? `<small class="order-bag-item__price">${product.price} each</small>` : ''}
+<div class="order-bag-item__qty" aria-label="Quantity for ${product.name}">
             <button type="button" data-bag-minus="${id}" aria-label="Remove one ${product.name}">−</button>
             <b>${qty}</b>
             <button type="button" data-bag-plus="${id}" aria-label="Add one ${product.name}">＋</button>
