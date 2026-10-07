@@ -1,5 +1,3 @@
-const REQUEST_EMAIL = 'hello@moonandmossapothecary.com'; // Replace with the client's preferred customer-order email before launch.
-
 const requestForm = document.querySelector('[data-request-form]');
 const bagSummary = document.querySelector('[data-request-bag]');
 const bagItemsNode = document.querySelector('[data-request-bag-items]');
@@ -24,8 +22,11 @@ const productNames = {
 };
 
 function getBag() {
-  try { return JSON.parse(localStorage.getItem('moonMossOrderBag') || '{}'); }
-  catch { return {}; }
+  try {
+    return JSON.parse(localStorage.getItem('moonMossOrderBag') || '{}');
+  } catch {
+    return {};
+  }
 }
 
 function bagLines() {
@@ -36,8 +37,19 @@ function bagLines() {
 
 function renderBag() {
   const lines = bagLines();
-  bagSummary.hidden = lines.length === 0;
-  bagItemsNode.innerHTML = lines.map((line) => `<div class="request-bag-item"><span>♡</span><strong>${line}</strong></div>`).join('');
+
+  if (bagSummary) {
+    bagSummary.hidden = lines.length === 0;
+  }
+
+  if (bagItemsNode) {
+    bagItemsNode.innerHTML = lines
+      .map(
+        (line) =>
+          `<div class="request-bag-item"><span>♡</span><strong>${line}</strong></div>`
+      )
+      .join('');
+  }
 }
 
 clearBagButton?.addEventListener('click', () => {
@@ -45,33 +57,65 @@ clearBagButton?.addEventListener('click', () => {
   renderBag();
 });
 
-requestForm?.addEventListener('submit', (event) => {
+requestForm?.addEventListener('submit', async (event) => {
   event.preventDefault();
+
+  const submitButton = requestForm.querySelector('[type="submit"]');
   const data = new FormData(requestForm);
   const selected = bagLines();
-  const body = [
-    'Hi Moon + Moss!',
-    '',
-    'I would like to ask about the following:',
-    selected.length ? selected.map((line) => `- ${line}`).join('\n') : '- No items selected from the online order bag',
-    '',
-    `Other items / description:\n${data.get('items') || ''}`,
-    '',
-    `Name: ${data.get('name') || ''}`,
-    `Email: ${data.get('email') || ''}`,
-    `Phone: ${data.get('phone') || 'Not provided'}`,
-    `Preferred contact: ${data.get('contact') || ''}`,
-    '',
-    `Shipping address (if applicable):\n${data.get('address') || 'Not provided'}`,
-    '',
-    `Additional notes:\n${data.get('notes') || 'None'}`,
-    '',
-    'Could you let me know what is available, pricing, and next steps? Thank you!'
-  ].join('\n');
 
-  const subject = `Moon + Moss item request — ${data.get('name') || 'customer'}`;
-  statusNode.textContent = 'Opening your email app with the request filled in…';
-  window.location.href = `mailto:${REQUEST_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  data.append(
+    'order_bag',
+    selected.length
+      ? selected.join('\n')
+      : 'No items selected from the online order bag'
+  );
+
+  if (statusNode) {
+    statusNode.textContent = 'Sending your request…';
+  }
+
+  if (submitButton) {
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending…';
+  }
+
+  try {
+    const response = await fetch(requestForm.action, {
+      method: 'POST',
+      body: data,
+      headers: {
+        Accept: 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error('Form submission failed');
+    }
+
+    if (statusNode) {
+      statusNode.textContent =
+        'Thanks! Your request was sent to Moon + Moss. They’ll be in touch soon. ♡';
+    }
+
+    requestForm.reset();
+    localStorage.removeItem('moonMossOrderBag');
+    renderBag();
+
+    if (submitButton) {
+      submitButton.textContent = 'Request Sent ✓';
+    }
+  } catch (error) {
+    if (statusNode) {
+      statusNode.textContent =
+        'Something went wrong while sending your request. Please try again.';
+    }
+
+    if (submitButton) {
+      submitButton.disabled = false;
+      submitButton.textContent = 'Send My Request →';
+    }
+  }
 });
 
 renderBag();

@@ -2,7 +2,7 @@ const products = [
   {
     id: 'lavender-bath-salts',
     name: 'Lavender Bath Salts',
-    price: '',
+    price: '$7',
     category: 'bath-body',
     categoryLabel: 'Bath + Body',
     image: 'assets/products/lavender-bath-salts.webp',
@@ -13,7 +13,7 @@ const products = [
   {
     id: 'mahogany-teakwood-beard-oil',
     name: 'Mahogany Teakwood Beard Oil',
-    price: '',
+    price: '$5',
     category: 'grooming',
     categoryLabel: 'Beard + Shave',
     image: 'assets/products/mahogany-teakwood-beard-oil.webp',
@@ -24,7 +24,7 @@ const products = [
   {
     id: 'mahogany-teakwood-aftershave',
     name: 'Mahogany Teakwood Aftershave',
-    price: '',
+    price: '$3',
     category: 'grooming',
     categoryLabel: 'Beard + Shave',
     image: 'assets/products/mahogany-teakwood-aftershave.webp',
@@ -101,7 +101,7 @@ const products = [
   {
     id: 'peppermint-eucalyptus-foot-cream',
     name: 'Peppermint Eucalyptus Foot Cream',
-    price: '',
+    price: '$3',
     category: 'bath-body',
     categoryLabel: 'Bath + Body',
     image: 'assets/products/peppermint-eucalyptus-foot-cream.webp',
@@ -112,7 +112,7 @@ const products = [
   {
     id: 'anxiety-relief-spray-for-dogs',
     name: 'Anxiety Relief Spray for Dogs',
-    price: '',
+    price: '$3',
     category: 'pet-outdoor',
     categoryLabel: 'Pet + Outdoor',
     image: 'assets/products/anxiety-relief-spray-for-dogs.webp',
@@ -134,7 +134,7 @@ const products = [
   {
     id: 'after-sun-relief-spray',
     name: 'After Sun Relief Spray',
-    price: '',
+    price: '$3',
     category: 'pet-outdoor',
     categoryLabel: 'Pet + Outdoor',
     image: 'assets/products/after-sun-relief-spray.webp',
@@ -145,7 +145,7 @@ const products = [
   {
     id: 'bug-repellent-spray',
     name: 'Bug Repellent Spray',
-    price: '',
+    price: '$3',
     category: 'pet-outdoor',
     categoryLabel: 'Pet + Outdoor',
     image: 'assets/products/bug-repellent-spray.webp',
